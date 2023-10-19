@@ -50,9 +50,9 @@ Animating a circle
 
    class CreateCircle(Scene):
        def construct(self):
-           circle = Circle()  # create a circle
+           circle = Circle()                   # create a circle
            circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-           self.play(Create(circle))  # show the circle on screen
+           self.play(Create(circle))           # show the circle on screen
 
 2. Save the code snippet into your project folder with the name ``scene.py``.
 
@@ -78,7 +78,7 @@ Your default movie player will play the MP4 file, displaying the following anima
        def construct(self):
            circle = Circle()                   # create a circle
            circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-           self.play(Create(circle))     # show the circle on screen
+           self.play(Create(circle))           # show the circle on screen
 
 If you see an animation of a pink circle being drawn, congratulations!
 You just wrote your first Manim scene from scratch.
@@ -123,7 +123,7 @@ The next two lines create a circle and set its color and opacity:
 
 .. code-block:: python
 
-           circle = Circle()  # create a circle
+           circle = Circle()                   # create a circle
            circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
 
 Finally, the last line uses the animation :class:`.Create` to display the
@@ -149,15 +149,15 @@ With our circle animation complete, let's move on to something a little more com
 
    class SquareToCircle(Scene):
        def construct(self):
-           circle = Circle()  # create a circle
+           circle = Circle()                   # create a circle
            circle.set_fill(PINK, opacity=0.5)  # set color and transparency
 
-           square = Square()  # create a square
+           square = Square()      # create a square
            square.rotate(PI / 4)  # rotate a certain amount
 
-           self.play(Create(square))  # animate the creation of the square
+           self.play(Create(square))             # animate the creation of the square
            self.play(Transform(square, circle))  # interpolate the square into the circle
-           self.play(FadeOut(square))  # fade out animation
+           self.play(FadeOut(square))            # fade out animation
 
 2. Render ``SquareToCircle`` by running the following command in the command line:
 
@@ -198,13 +198,13 @@ Next, let's go over some basic techniques for positioning ``Mobject``\s.
 
    class SquareAndCircle(Scene):
        def construct(self):
-           circle = Circle()  # create a circle
+           circle = Circle()                   # create a circle
            circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
 
-           square = Square()  # create a square
+           square = Square()                   # create a square
            square.set_fill(BLUE, opacity=0.5)  # set the color and transparency
 
-           square.next_to(circle, RIGHT, buff=0.5)  # set the position
+           square.next_to(circle, RIGHT, buff=0.5)    # set the position
            self.play(Create(circle), Create(square))  # show the shapes on screen
 
 2. Render ``SquareAndCircle`` by running the following command in the command line:
@@ -266,7 +266,7 @@ and animating those method calls with ``.animate``.
            circle = Circle()  # create a circle
            square = Square()  # create a square
 
-           self.play(Create(square))  # show the square on screen
+           self.play(Create(square))                 # show the square on screen
            self.play(square.animate.rotate(PI / 4))  # rotate the square
            self.play(
                ReplacementTransform(square, circle)
